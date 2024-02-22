@@ -14,7 +14,7 @@
     <div class="container d-flex justify-content-center">
         <div class="row mt-3">
             <div class="col-8 mt-3">
-                <div class="animation mt-5">
+                <div class="animation mt-3">
                     <h1 id="text-div" style="font-size: 40px;"></h1>
                 </div>
             </div>
@@ -22,10 +22,10 @@
     </div>
 
     <!-- Input password -->
-    <div class="container col-4 mt-5 d-flex align-items-center justify-content-center">
+    <div class="container col-6 mt-5 d-flex align-items-center justify-content-center">
         <div class="input-group mb-3">
-            <input type="text" id="pGenerated" readonly style="font-size: 24px;" class="form-control bg-secondary text-center text-white" value="‎" aria-label="Recipient's username" aria-describedby="button-addon2">
-            <button class="btn btn-outline-secondary" onclick="copy()" type="button" id="button-addon2"><i class="bi bi-copy"></i></button>
+            <input type="text" id="pGenerated" readonly style="font-size: 26px;" class="form-control bg-secondary text-center text-white" value="‎" aria-label="Recipient's username" aria-describedby="button-addon2">
+            <button class="btn btn-outline-primary" onclick="copy()" type="button" id="button-addon2"> Copy! <i class="bi bi-copy"></i></button>
         </div>
     </div>
 
@@ -48,31 +48,31 @@
     <div class="container mt-5 col-8 d-flex align-items-center justify-content-center">
         <div class="input-group w-100 d-flex align-items-center justify-content-center">
             <div class="input-group-text bg-dark">
-            <input class="form-check-input mt-0 bg-secondary custom-checkbox" id="numbers" checked type="checkbox" aria-label="Checkbox for following text input">
-            <p class="text-center text-white custom-input m-1" style="font-size: 20px;"> Numbers </p>
+                <input class="form-check-input mt-0 bg-secondary custom-checkbox" id="numbers" checked type="checkbox" aria-label="Checkbox for following text input">
+                <p class="text-center text-white custom-input m-1" style="font-size: 20px;"> Numbers </p>
+            </div>
         </div>
     </div>
-</div>
 
     <!-- Symbols Checkbox -->
     <div class="container mt-3 col-8 d-flex align-items-center justify-content-center">
         <div class="input-group w-100 d-flex align-items-center justify-content-center">
             <div class="input-group-text bg-dark">
-            <input class="form-check-input mt-0 bg-secondary custom-checkbox" id="symbols"  checked type="checkbox" aria-label="Checkbox for following text input">
-            <p class="text-center text-white custom-input m-1" style="font-size: 20px;"> Symbols </p>
+                <input class="form-check-input mt-0 bg-secondary custom-checkbox" id="symbols"  checked type="checkbox" aria-label="Checkbox for following text input">
+                <p class="text-center text-white custom-input m-1" style="font-size: 20px;"> Symbols </p>
+            </div>
         </div>
     </div>
-</div>
 
     <!-- Uppercase Checkbox -->
     <div class="container mt-3 col-8 d-flex align-items-center justify-content-center">
         <div class="input-group w-100 d-flex align-items-center justify-content-center">
             <div class="input-group-text bg-dark">
-            <input class="form-check-input mt-0 bg-secondary custom-checkbox" id="uppercase"  checked type="checkbox" aria-label="Checkbox for following text input">
-            <p class="text-center text-white custom-input m-1" style="font-size: 20px;"> Uppercase letters </p>
+                <input class="form-check-input mt-0 bg-secondary custom-checkbox" id="uppercase"  checked type="checkbox" aria-label="Checkbox for following text input">
+                <p class="text-center text-white custom-input m-1" style="font-size: 20px;"> Uppercase letters </p>
+            </div>
         </div>
     </div>
-</div>
 
     <!-- Lowercase Checkbox -->
     <div class="container mt-3 col-8 d-flex align-items-center justify-content-center">
@@ -85,9 +85,19 @@
     </div>
     
     <!-- Generate Button -->
-<div class="container mt-5 col-8 d-flex align-items-center justify-content-center">
-    <button type="button" onclick="pGenerated()" class="btn text-white px-5" style="background-color:rgb(73, 0, 207); font-weight: bold;"> G E N E R A T E </button>
-</div>
+    <div class="container mt-4 col-8 d-flex align-items-center justify-content-center">
+        <button type="button" onclick="pGenerated()" class="btn text-white px-5" style="background-color:rgb(73, 0, 207); font-weight: bold;"> G E N E R A T E </button>
+    </div>
+
+    <!-- Label Security -->
+    <div class="container mt-5 col-8 d-flex align-items-center justify-content-center">
+        <p id="labelSecurity" class="text-center text-white" style="font-size: 20px;"> Strong </p>
+    </div>
+
+    <!-- ProgressBar -->
+    <div id="progressBar" class="progress container col-4 d-flex bg-dark border border-secondary" role="progressbar" aria-label="Default striped example" aria-valuenow="10" aria-valuemin="0" aria-valuemax="100">
+        <div class="progress-bar progress-bar-striped bg-success" style="width: 100%"></div>
+    </div>
 
     <!-- Scripts -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>

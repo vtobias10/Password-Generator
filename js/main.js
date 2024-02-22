@@ -117,3 +117,45 @@ function showPassword(password) {
     const inputPassword = document.getElementById('pGenerated');
     inputPassword.value = password;
 }
+
+var slider = document.getElementById('slider');
+var sliderValue = document.getElementById('sliderValue');
+var progressBar = document.getElementById('progressBar');
+var labelSecurity = document.getElementById('labelSecurity');
+
+slider.addEventListener('input', function () {
+    sliderValue.textContent = slider.value;
+
+    updateSecurityLabel();
+    updateProgressBar();
+});
+
+function updateSecurityLabel() {
+    const value = parseInt(slider.value);
+
+    if (value >= 4 && value <= 6) {
+        labelSecurity.textContent = 'Weak';
+    } else if (value >= 7 && value <= 10) {
+        labelSecurity.textContent = 'Good';
+    } else if (value >= 11 && value <= 30) {
+        labelSecurity.textContent = 'Strong';
+    }
+}
+
+function updateProgressBar() {
+    const value = parseInt(slider.value);
+
+    if (value >= 4 && value <= 6) {
+        setProgressBarStyle(25, 'bg-danger');
+    } else if (value >= 7 && value <= 10) {
+        setProgressBarStyle(50, 'bg-warning');
+    } else if (value >= 11 && value <= 30) {
+        setProgressBarStyle(100, 'bg-success');
+    }
+}
+
+function setProgressBarStyle(width, colorClass) {
+    progressBar.querySelector('.progress-bar').style.width = `${width}%`;
+    progressBar.querySelector('.progress-bar').classList.remove('bg-danger', 'bg-warning', 'bg-success');
+    progressBar.querySelector('.progress-bar').classList.add(colorClass);
+}
