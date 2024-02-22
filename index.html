@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="css/styles.css">
+    <title>Password Generator</title>
+</head>
+<body class="bg-dark">
+
+    <!-- Header -->
+    <div class="container d-flex justify-content-center">
+        <div class="row mt-3">
+            <div class="col-8 mt-3">
+                <div class="animation mt-5">
+                    <h1 id="text-div" style="font-size: 40px;"></h1>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Input password -->
+    <div class="container col-4 mt-5 d-flex align-items-center justify-content-center">
+        <div class="input-group mb-3">
+            <input type="text" id="pGenerated" readonly style="font-size: 24px;" class="form-control bg-secondary text-center text-white" value="‎" aria-label="Recipient's username" aria-describedby="button-addon2">
+            <button class="btn btn-outline-secondary" onclick="copy()" type="button" id="button-addon2"><i class="bi bi-copy"></i></button>
+        </div>
+    </div>
+
+    <!-- Slider Value -->
+    <div class="container col-6 mt-1 d-flex align-items-center justify-content-center">
+        <div class="d-flex align-items-center justify-content-center">
+            <p><span id="sliderValue" style="color: rgb(73, 0, 207); font-size: 26px;">17</span></p>
+        </div>
+    </div>
+
+    <!-- Slider -->
+    <div class="container col-6 d-flex align-items-center justify-content-center">
+        <div class="container col-6 d-flex align-items-center justify-content-center">
+            <label for="slider"></label>
+            <input type="range" class="form-range" id="slider" min="4" max="30" step="1" value="17">
+        </div>
+    </div>
+
+    <!-- Numbers Checkbox -->
+    <div class="container mt-5 col-8 d-flex align-items-center justify-content-center">
+        <div class="input-group w-100 d-flex align-items-center justify-content-center">
+            <div class="input-group-text bg-dark">
+            <input class="form-check-input mt-0 bg-secondary custom-checkbox" id="numbers" checked type="checkbox" aria-label="Checkbox for following text input">
+            <p class="text-center text-white custom-input m-1" style="font-size: 20px;"> Numbers </p>
+        </div>
+    </div>
+</div>
+
+    <!-- Symbols Checkbox -->
+    <div class="container mt-3 col-8 d-flex align-items-center justify-content-center">
+        <div class="input-group w-100 d-flex align-items-center justify-content-center">
+            <div class="input-group-text bg-dark">
+            <input class="form-check-input mt-0 bg-secondary custom-checkbox" id="symbols"  checked type="checkbox" aria-label="Checkbox for following text input">
+            <p class="text-center text-white custom-input m-1" style="font-size: 20px;"> Symbols </p>
+        </div>
+    </div>
+</div>
+
+    <!-- Uppercase Checkbox -->
+    <div class="container mt-3 col-8 d-flex align-items-center justify-content-center">
+        <div class="input-group w-100 d-flex align-items-center justify-content-center">
+            <div class="input-group-text bg-dark">
+            <input class="form-check-input mt-0 bg-secondary custom-checkbox" id="uppercase"  checked type="checkbox" aria-label="Checkbox for following text input">
+            <p class="text-center text-white custom-input m-1" style="font-size: 20px;"> Uppercase letters </p>
+        </div>
+    </div>
+</div>
+
+    <!-- Lowercase Checkbox -->
+    <div class="container mt-3 col-8 d-flex align-items-center justify-content-center">
+        <div class="input-group w-100 d-flex align-items-center justify-content-center">
+            <div class="input-group-text bg-dark mb-3">
+                <input class="form-check-input mt-0 bg-secondary custom-checkbox" id="lowercase" checked type="checkbox" aria-label="Checkbox for following text input">
+                <p class="text-center text-white custom-input m-1" style="font-size: 20px;"> Lowercase letters </p>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Generate Button -->
+<div class="container mt-5 col-8 d-flex align-items-center justify-content-center">
+    <button type="button" onclick="pGenerated()" class="btn text-white px-5" style="background-color:rgb(73, 0, 207); font-weight: bold;"> G E N E R A T E </button>
+</div>
+
+    <!-- Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>

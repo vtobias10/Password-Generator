@@ -1,0 +1,56 @@
+body{
+    font-weight: bold;
+}
+
+#text-div {
+    font-size: 24px;
+    display: inline-block;
+    white-space: nowrap;
+    overflow: hidden;
+    padding-right: 4px;
+    color: rgb(73, 0, 207);
+}
+
+@keyframes blinkingCursor {
+    0% { opacity: 1; }
+    50% { opacity: 0; }
+    100% { opacity: 1; }
+}
+
+input[type="range"]::-webkit-slider-thumb {
+    background-color: rgb(73, 0, 207);
+    border: 1px solid #fff;
+    height: 20px;
+    width: 20px;
+}
+
+input[type="range"]::-moz-range-thumb {
+    background-color:rgb(73, 0, 207);
+    border: 1px solid #fff;
+    height: 20px;
+    width: 20px;
+}
+
+.form-control:focus {
+    border-color: rgb(73, 0, 207) !important;
+}
+
+.swal2-popup {
+    background-color: #000;
+    color:  #fff;
+}
+
+.container input[type="checkbox"] {
+    width: 20px;
+    height: 20px;
+    margin-right: 10px;
+}
+
+.input-group-text {
+    padding-inline: 50px;
+}
+
+.text-center {
+    width: 120px;
+}
+
